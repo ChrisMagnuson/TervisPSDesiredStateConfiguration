@@ -19,16 +19,3 @@ function Install-TervisDesiredStateConfiguration {
         Remove-Item -path $TempPath\$ComputerName -recurse -force
     }
 }
-
-function New-DSCConfigurationForSingleNode {
-    param (
-        [Parameter(Mandatory,ValueFromPipelineByPropertyName)]$ComputerName
-    )
-    @{
-        AllNodes = @(
-            @{
-                NodeName = $ComputerName
-            }
-        )
-    }
-}
