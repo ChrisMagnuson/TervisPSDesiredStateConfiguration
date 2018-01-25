@@ -1,5 +1,4 @@
 ﻿$ModulePath = (Get-Module -ListAvailable TervisPSDesiredStateConfiguration).ModuleBase
-. $ModulePath\Definition.ps1
 
 Get-ChildItem $ModulePath\DSCConfiguration |
 ForEach-Object {
